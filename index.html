@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update BTC</title>
+</head>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+        .main-table{
+            margin: auto;
+            text-align: center;
+        }
+        .main-table h2{
+        }
+        .main-table td, th{
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+        }
+    </style>
+<body>
+        <div class="main">
+            <table class="main-table">
+                <tr><td colspan="7"><h2>Cảnh báo</h2></td></tr>
+                <tr>
+                    <th>Coin</th>
+                    <th>Giá hiện tại</th>
+                    <th>Thời gian</th>
+                    <th>Cài đặt giá</th>
+                    <th>Trong khoảng</th>
+                    <th>Thông báo tới</th>
+                    <th>Chỉnh sửa/Xóa</th>
+                </tr>
+                <tr>
+                    <td>BTC/USDT</td>
+                    <td id="coin-now"></td>
+                    <td id="time-now"></td>
+                    <td>Tăng 2000$</td>
+                    <td>15m</td>
+                    <td>@tienanh</td>
+                    <td>Chỉnh sửa/Xóa</td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            var today = new Date();
+            var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+            document.getElementById("time-now").innerHTML = dateTime;
+         </script>
+</body>
+</html>
