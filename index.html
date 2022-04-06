@@ -16,10 +16,19 @@
             display: flex;
             width: 100%;
             height: 100vh;
+            flex-direction: column;
         }
         #btc{
-            margin: auto;
+            margin: auto auto 0;
             text-align: center;
+        }
+        .table{
+            margin: 0 auto auto;
+            text-align: center;
+        }
+        .table td{
+            border: 1px solid #ccc;
+            padding: 8px 12px;
         }
         #btc h2{
         }
@@ -30,10 +39,16 @@
     </style>
 <body>
         <div class="main">
+
             <table id="btc">
             </table>
+            <table class="table">
+                <tr>
+                    <td>Nhập thời gian bạn muốn so sánh (phút)</td>
+                    <td><input type="text" placeholder="15" id="timeHis"></td>
+                </tr>
+            </table>
         </div>
-        
         <script src="./main.js"></script>
 </body>
 </html>
